@@ -1,0 +1,24 @@
+:root{--bg:#061523;--card:#081c2d;--glow:#00b7ff;--txt:#cfefff;--muted:#6bb8d8}
+*{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial}
+body{margin:0;background:radial-gradient(1200px 600px at 50% 0%,rgba(0,183,255,.15),transparent 60%),var(--bg);color:var(--txt)}
+.topbar{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:rgba(2,10,18,.85);backdrop-filter:blur(8px);border-bottom:1px solid rgba(0,183,255,.25)}
+.brand{font-weight:800;letter-spacing:.5px}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{border:1px solid rgba(0,183,255,.35);background:rgba(0,183,255,.08);color:var(--txt);padding:10px 14px;border-radius:999px;cursor:pointer;box-shadow:0 0 0 rgba(0,183,255,0);transition:.18s ease}
+.btn:hover{box-shadow:0 0 18px rgba(0,183,255,.28)}
+.btn.primary{border:1px solid rgba(0,183,255,.55);background:linear-gradient(180deg,rgba(0,183,255,.22),rgba(0,183,255,.10))}
+.notice{max-width:1100px;margin:10px auto 0;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05)}
+.stage{max-width:1400px;margin:0 auto;padding:18px}
+.viewer{position:relative;background:rgba(255,255,255,.02);border:1px solid rgba(0,183,255,.18);border-radius:24px;padding:18px;box-shadow:0 0 60px rgba(0,183,255,.08)}
+.spread{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:18px;overflow:hidden}
+.page{background:white;min-height:70vh;display:flex;align-items:center;justify-content:center}
+.page img{max-width:100%;max-height:70vh;display:block}
+.nav{display:flex;gap:12px;justify-content:center;align-items:center;padding-top:14px}
+.counter{color:var(--muted);font-weight:700}
+.curl{position:absolute;top:18px;bottom:70px;right:18px;width:50%;pointer-events:none;transform-origin:right center;opacity:0;}
+.curl::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(0,0,0,.15),rgba(0,0,0,.25));}
+.viewer.curl-next .curl{opacity:1;animation:curlNext .55s ease}
+.viewer.curl-prev .curl{opacity:1;left:18px;right:auto;transform-origin:left center;animation:curlPrev .55s ease}
+@keyframes curlNext{0%{transform:perspective(900px) rotateY(0deg)}100%{transform:perspective(900px) rotateY(-160deg)}}
+@keyframes curlPrev{0%{transform:perspective(900px) rotateY(0deg)}100%{transform:perspective(900px) rotateY(160deg)}}
+@media (max-width:900px){.spread{grid-template-columns:1fr}.page.right{display:none}.curl{display:none}.page img{max-height:75vh}}

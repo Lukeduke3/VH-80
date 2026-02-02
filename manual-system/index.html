@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Craftlander Manuals</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand">CraftLander Manuals</div>
+    <div class="actions">
+      <button id="btnManual" class="btn primary">Manual</button>
+      <button id="btnBom" class="btn">BOM</button>
+      <button id="btnPrint" class="btn">Print</button>
+      <button id="btnDownload" class="btn">Download</button>
+    </div>
+  </div>
+
+  <div id="notice" class="notice" hidden></div>
+
+  <main class="stage">
+    <div id="viewer" class="viewer">
+      <div class="spread">
+        <div class="page left"><img id="imgLeft" alt="" /></div>
+        <div class="page right"><img id="imgRight" alt="" /></div>
+      </div>
+
+      <div id="curl" class="curl" aria-hidden="true"></div>
+
+      <div class="nav">
+        <button id="btnPrev" class="btn">◀ Prev</button>
+        <div id="counter" class="counter">—</div>
+        <button id="btnNext" class="btn">Next ▶</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

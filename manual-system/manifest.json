@@ -1,0 +1,12 @@
+{
+  "title": "CraftLander VH-8000 Hydraulic Boat Lift",
+  "manual": {
+    "count": 35,
+    "prefix": "manual_",
+    "ext": "png"
+  },
+  "bom": {
+    "enabled": true,
+    "pdf": "bom/bom.pdf"
+  }
+}

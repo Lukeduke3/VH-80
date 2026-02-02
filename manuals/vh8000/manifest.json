@@ -1,0 +1,23 @@
+{
+  "title": "VH-8000 Manual",
+  "pages": [
+    "pages/manual_001.png",
+    "pages/manual_002.png",
+    "pages/manual_003.png",
+    "pages/manual_004.png",
+    "pages/manual_005.png",
+    "pages/manual_006.png",
+    "pages/manual_007.png",
+    "pages/manual_008.png",
+    "pages/manual_009.png",
+    "pages/manual_010.png",
+    "pages/manual_011.png",
+    "pages/manual_012.png",
+    "pages/manual_013.png",
+    "pages/manual_014.png",
+    "pages/manual_015.png"
+  ],
+  "bom": [
+    "pages/bom_001.png"
+  ]
+}
